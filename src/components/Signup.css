@@ -1,0 +1,76 @@
+#f1{
+    border: 1px solid red ;    
+    padding: 60px 30px;
+    width: 30%;
+    height: 600px;;
+        text-align: center;
+        align-items: center;
+        box-shadow: 20px 20px 50px 20px rgb(196, 126, 126);
+        background-color: rgb(106, 106, 190) ;
+        border-radius: 6%;
+        animation: fun 4s linear infinite alternate;
+    }
+    #f1:hover{
+        box-shadow:inset 20px 20px 100px rgb(97, 190, 205);
+    }
+    #form_div{
+        display:flex;
+        justify-content: space-around;
+      
+    }
+    input,select{
+        height: 30px;
+        border-radius:8px ;
+        background-color: rgb(242, 228, 210);
+    }
+    select{
+        width: 60px;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    label{
+        font-size: 23px;
+    }
+    
+    
+    
+    
+    .s1,.s2{
+        border-radius: 30%;
+        cursor: pointer;
+        text-align: center;
+        padding: 12px;
+        margin-top: 30px;
+        box-shadow: 5px 5px 5px 3px rgb(237, 172, 172) ;
+        margin-left: 10px;
+        
+        
+    
+    
+        
+    }
+    .s1:hover , .s2:hover{
+      padding: 15px;
+      box-shadow: 5px 5px 20px 3px rgb(175, 183, 113) inset;
+        
+    }
+    body{
+        background-color: rgb(109, 183, 175);
+        background-image: linear-gradient(to right, black, white );
+    
+    }
+    
+    @keyframes fun{
+        0% {box-shadow: 20px 20px 50px 20px rgb(196, 126, 126);}
+        25% {box-shadow: 20px 20px 50px 20px rgb(107, 53, 14);}
+        50%{box-shadow: 20px 20px 50px 20px rgb(40, 54, 30);}
+        75%{box-shadow: 20px 20px 50px 20px rgb(8, 53, 40);}
+        100%{box-shadow: 20px 20px 50px 20px rgb(27, 13, 53);}
+    }
+    #heading{
+        margin-top:50px;
+        margin-bottom: 20px;
+    }
+    

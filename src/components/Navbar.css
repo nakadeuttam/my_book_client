@@ -1,0 +1,13 @@
+  .collapse .nav-link {
+    color: white;
+  }
+  .container-fluid .navbar-brand {
+    color:#e44646;
+  }
+  .collapse .nav-link:hover , .collapse .nav-link.active,.container-fluid .navbar-brand:hover ,.container-fluid .navbar-brand.active{
+    color: #ffc107; /* Change the hover color as per your preference */
+  }; 
+
+
+
+ 

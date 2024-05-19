@@ -1,0 +1,65 @@
+.custom-shape-divider-bottom-1715364342 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1715364342 svg {
+    position: relative;
+    display: block;
+    width: calc(155% + 1.3px);
+    height: 335px;
+}
+
+.custom-shape-divider-bottom-1715364342 .shape-fill {
+    fill: rgb(37, 58, 89);
+}
+.wrapper{
+    background: linear-gradient(rgb(37, 58, 89), #ca9797, #9198e5);
+    height:100vh;
+    padding-top: 9vh;
+    
+}
+
+img{
+    
+    width: 80%;
+    height: 80%;
+
+}
+
+.carousel-item{
+    height: 500px;
+    width: 700px;
+}
+.carousel{
+    height: 500px;
+    width: 700px;
+    
+    
+}
+
+.carousel-caption h5 , p{
+    color:black;
+}
+
+.wrapper2{
+    padding-top:9vh ;
+    height:100vh;
+}
+.features{
+    padding:40px;
+}
+.features li{
+    padding-bottom:10px;
+}
+.parent_about{
+    height: 100vh;
+    padding-top:3vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
