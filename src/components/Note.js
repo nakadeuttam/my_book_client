@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import './Note.css';
 const Note = () => {
   const navigate = useNavigate();
-  const {addNote} = useContext(noteContext);
+  // const {addNote} = useContext(noteContext);
     const Context = useContext(noteContext)
     const {notes,get_Notes,edit_Note} = Context;
     const [note,setNote] = useState( { id:"" , etitle:"" , edescription:""});
@@ -21,7 +21,7 @@ const Note = () => {
           alert("Do login first");
           navigate("/login");
         }
-    },[]);
+    },[get_Notes,navigate]);
 
     const ref=useRef(null);
     const updateNote =(note)=>{

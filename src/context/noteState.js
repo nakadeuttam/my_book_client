@@ -48,6 +48,7 @@ const response = await fetch(`${host}/notes/deleteNote/${id}`,{method:"DELETE",h
   'Content-Type':'application/json',
   'auth-token':localStorage.getItem('token')
 }});
+console.log(response);
 get_Notes();      //once call get_Notes to fetch updated note from db
   }catch(e){console.log("Unable to fetch")}
 }

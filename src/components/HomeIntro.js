@@ -49,18 +49,18 @@ function HomeIntro() {
             <h4 >Contact us:</h4>
             <ul className="contact my-4">
             <a href="https://www.linkedin.com/in/uttam-nakade-54a852247" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in fa-xl" style={{color: "#285095"}}></i></a>
-            <a href="https://twitter.com/nakade_uttam" target="_blank" rel="noopener norefer"><i className="fa-brands fa-x-twitter fa-xl" style={{color: "#0d0d0d"}}></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100073788919787&mibextid=ZbWKwL" target="_blank"><i className="fa-brands fa-facebook fa-xl" style={{color: "#2e6cd6"}}></i></a>
-            <a href="https://www.instagram.com/nakadeuttam96?igsh=MWk4Y2R3Z3Q3eGZwNw==" target="_blank"><i className="fa-brands fa-instagram fa-xl" style={{color: "#de6bf5"}}></i></a>
-            <a href=""><i className="fa-brands fa-telegram fa-xl" style={{color: "#527dc7"}}></i></a>
+            <a href="https://twitter.com/nakade_uttam" target="_blank" rel="noreferrer"><i className="fa-brands fa-x-twitter fa-xl" style={{color: "#0d0d0d"}}></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100073788919787&mibextid=ZbWKwL" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook fa-xl" style={{color: "#2e6cd6"}}></i></a>
+            <a href="https://www.instagram.com/nakadeuttam96?igsh=MWk4Y2R3Z3Q3eGZwNw==" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram fa-xl" style={{color: "#de6bf5"}}></i></a>
+            <button><i className="fa-brands fa-telegram fa-xl" style={{color: "#527dc7"}}></i></button>
             </ul>
           </div>
           <div className="moreTools">
             <h4 className="mx-5">More Tools:</h4>
           <ul>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">NewsApp</a></li>
-            <li><a href="https://nakadeuttam.github.io/my-react-app/" target="_blank">TextUtils</a></li>
+            <li><button>Portfolio</button></li>
+            <li><button>NewsApp</button></li>
+            <li><a href="https://nakadeuttam.github.io/my-react-app/" target="_blank" rel="noreferrer">TextUtils</a></li>
             </ul>
           </div>
         </div>

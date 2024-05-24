@@ -1,12 +1,12 @@
 import React, { useState ,useContext, useEffect} from 'react'
-import { Link ,useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import "./Login.css"
 import noteContext from '../context/noteContext';
 const Login = () => {
     const Context = useContext(noteContext)
     const{loginToggle,setLoginToggle}=Context;
     const [credentials,setCredentials]=useState({email:"" , password:"" , email_signup:"" , password_signup:"" , Name:""})
-   useEffect(()=>{setLoginToggle('hidden')},[]);
+   useEffect(()=>{setLoginToggle('hidden')},[setLoginToggle]);
   
     // TO toggle between Sign in & Sign Up form
    
@@ -102,10 +102,10 @@ else{
             <form onSubmit={handleSignup}>
                 <h1>Create Account</h1>
                 <div className="social-icons">
-                    <a href="#" className="icon"><i className="fa-brands fa-google-plus-g" style={{color: "#FFD43B"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-facebook-f" style={{color: "#3049ab"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-github" style={{color: "#31363f"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-linkedin-in" style={{color: "#3763ae"}}></i></a>
+                    <a href='https://www.google.com/' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-google-plus-g" style={{color: "#FFD43B"}}></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-facebook-f" style={{color: "#3049ab"}}></i></a>
+                    <a href='https://github.com/' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-github" style={{color: "#31363f"}}></i></a>
+                    <a href='https://linkedin.com' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-linkedin-in" style={{color: "#3763ae"}}></i></a>
                 </div>
                 <span>or use your email for registeration</span>
                 <input type="text" name="Name" id="Name" onChange={onChange} value={credentials.Name} placeholder="Name" minLength={3}/>
@@ -118,15 +118,15 @@ else{
             <form onSubmit={handleLogin}>
                 <h1>Sign In</h1>
                 <div className="social-icons">
-                    <a href="#" className="icon"><i className="fa-brands fa-google-plus-g" style={{color: "#FFD43B"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-facebook-f" style={{color: "#3049ab"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-github" style={{color: "#31363f"}}></i></a>
-                    <a href="#" className="icon"><i className="fa-brands fa-linkedin-in" style={{color: "#3763ae"}}></i></a>
+                <a href='https://www.google.com/' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-google-plus-g" style={{color: "#FFD43B"}}></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-facebook-f" style={{color: "#3049ab"}}></i></a>
+                    <a href='https://github.com/' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-github" style={{color: "#31363f"}}></i></a>
+                    <a href='https://linkedin.com' target="_blank" rel="noreferrer" className="icon"><i className="fa-brands fa-linkedin-in" style={{color: "#3763ae"}}></i></a>
                 </div>
                 <span>or use your email password</span>
                 <input type="email" name='email' id="email" onChange={onChange} value={credentials.email} placeholder="Email"/>
                 <input type="password" name='password' onChange={onChange} id="password" value={credentials.password} placeholder="Password"/>
-                <a href="#">Forget Your Password?</a>
+                <i>Forget Your Password?</i>
                 <button type='submit'>Sign In</button>
             </form>
         </div>
