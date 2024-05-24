@@ -1,4 +1,7 @@
 i{
     cursor: pointer;
 }
-
+.note_card{
+    border: 1px solid orange;
+    box-shadow: 20px 20px 50px grey;
+}

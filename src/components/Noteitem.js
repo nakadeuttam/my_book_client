@@ -17,7 +17,7 @@ const Noteitem = (props) => {
   return (
     
     <div className="col-md-6 my-4">
-<div className="card border-warning" >
+<div className="card border-warning note_card" >
   <div className="card-header d-flex justify-content-between">
     <div>{props.title}</div>
   <div>
