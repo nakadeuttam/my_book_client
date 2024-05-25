@@ -4,11 +4,12 @@ import { useContext} from 'react';
 import Noteitem from './Noteitem';
 import { useNavigate } from "react-router-dom";
 import './Note.css';
+import loader_gif from "./Resources/loader.gif";
 const Note = () => {
   const navigate = useNavigate();
   // const {addNote} = useContext(noteContext);
     const Context = useContext(noteContext)
-    const {notes,get_Notes,edit_Note} = Context;
+    const {notes,get_Notes,edit_Note, loader} = Context;
     const [note,setNote] = useState( { id:"" , etitle:"" , edescription:""});
    
    //get the notes once logged in into account
@@ -21,7 +22,8 @@ const Note = () => {
           alert("Do login first");
           navigate("/login");
         }
-    },[get_Notes,navigate]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     const ref=useRef(null);
     const updateNote =(note)=>{
@@ -125,7 +127,9 @@ const Note = () => {
   </div>
 </div>
     <div className="container">
-      {notes.length === 0 && <h2 className="text-center">No Notes Avilable</h2>}
+      {console.log(loader)}
+      {loader===true && <div style={{display:'flex', justifyContent:'center'}}><img src={loader_gif} alt="Loading Content" style={{height:"100px", width:"100px"}} /></div>}
+      {loader===false && notes.length === 0 && <h2 className="text-center">No Notes Avilable</h2>}
     <div className='row'>{notes.map((note)=>{
       return <Noteitem title={note.title} description={note.description} key={note._id}  note={note} updateNote={updateNote} viewNote={viewNote}></Noteitem>
     })}</div></div>

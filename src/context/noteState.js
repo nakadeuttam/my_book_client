@@ -7,11 +7,14 @@ const host ="https://my-book-backend-i0z0.onrender.com";  //url of backend part
 //login state
 const[loginToggle,setLoginToggle]=useState('hidden');
 
+//loader state
+const[loader,setLoader] = useState(false);
 
 //Get Notes
 
 const get_Notes= async()=>{
   try{
+    setLoader(true);
   const response = await fetch(`${host}/notes/Your_notes`,{method:"GET",headers:{
     'Content-Type':'application/json',
     "auth-token":localStorage.getItem('token')
@@ -20,6 +23,7 @@ const get_Notes= async()=>{
   
     const res_json= await response.json();
     console.log(res_json);
+    setLoader(false);
     setNote(res_json);
 }catch(e){console.log("Unable to fetch")}
 }
@@ -75,7 +79,7 @@ const response = await fetch(`${host}/notes/updateNote/${id}`,{method:"PUT",head
     
     return(
         /*   It specify that all children can access this state */
-        <NoteContext.Provider value={{notes,setNote,addNote,deleteNote,edit_Note,get_Notes,loginToggle,setLoginToggle}}>
+        <NoteContext.Provider value={{notes,setNote,addNote,deleteNote,edit_Note,get_Notes,loginToggle,setLoginToggle,loader,setLoader}}>
             {props.children}     
         </NoteContext.Provider>
     )

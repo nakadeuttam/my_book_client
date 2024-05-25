@@ -33,9 +33,6 @@ const AddNote = () => {
           onChange={onChange}
           value={note.title}
         />
-        <div id="emailHelp" className="form-text">
-          Title will help you to search Note
-        </div>
       </div>
       <div className="mb-3">
         <label htmlFor="description" className="form-label">
@@ -48,6 +45,7 @@ const AddNote = () => {
           name='description'
           onChange={onChange}
           value={note.description}
+          style={{height:'50px'}}
         />
       </div>
       

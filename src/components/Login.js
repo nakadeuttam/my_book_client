@@ -2,9 +2,10 @@ import React, { useState ,useContext, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import "./Login.css"
 import noteContext from '../context/noteContext';
+import loader_gif from "./Resources/loader.gif";
 const Login = () => {
     const Context = useContext(noteContext)
-    const{loginToggle,setLoginToggle}=Context;
+    const{loginToggle,setLoginToggle,loader,setLoader}=Context;
     const [credentials,setCredentials]=useState({email:"" , password:"" , email_signup:"" , password_signup:"" , Name:""})
    useEffect(()=>{setLoginToggle('hidden')},[setLoginToggle]);
   
@@ -32,11 +33,13 @@ const Login = () => {
         try{
         if(credentials.email && credentials.password)
             {
+                setLoader(true);
      const response = await fetch(`https://my-book-backend-i0z0.onrender.com/sign_up/login`,{method:"POST", 
      headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:credentials.email,password:credentials.password})});
     const json = await response.json();
     console.log(json);
+    setLoader(false);
     if(json.success) {
         //redirect
         localStorage.setItem('token' , json.authToken)
@@ -60,11 +63,12 @@ else{
         try{
         if(credentials.Name &&  credentials.email_signup && credentials.password_signup)
             {
-            
+            setLoader(true);
         const response = await fetch(`https://my-book-backend-i0z0.onrender.com/sign_up/signUp`,{method:"POST", headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:credentials.Name , email:credentials.email_signup,password:credentials.password_signup})});
     const json=await response.json()
     console.log(json);
+    setLoader(false);
     if(json.userFound){
         let wantToLogin = window.confirm("User with this mail is already registered , please Log in Or Try different email ,Do you Want to log in");
         if(wantToLogin)
@@ -94,8 +98,9 @@ else{
     }
 }catch(e){console.log("unable to fetch")}
     }
-  return (
-    <div className="loginBody">
+  return (<>
+    {loader===true && <div style={{display:'flex', justifyContent:'center', padding:'50px'}}><img src={loader_gif} alt="Loading Content" style={{height:"100px", width:"100px"}} /></div>}
+    {loader===false && <div className="loginBody">
     
     <div className={`container  ${loginToggle}  loginContainer`} id="container loginContainer">
         <div className="form-container sign-up">
@@ -146,7 +151,8 @@ else{
         </div>
     </div>
       
-    </div>
+    </div>}
+    </>
   )
 }
 
