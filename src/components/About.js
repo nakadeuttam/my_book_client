@@ -35,7 +35,7 @@ function About() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img src={signup} alt="..." />
-                <div className="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-md-block">
                   <h5>Sign Up</h5>
                   <p>Use email to Register as a new User.</p>
                 </div>
@@ -46,14 +46,14 @@ function About() {
                   className="d-block w-100"
                   alt="..."
                 />
-                <div className="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-md-block">
                   <h5>Log in </h5>
                   <p>Simply Log in into your account.</p>
                 </div>
               </div>
               <div className="carousel-item">
                 <img src={explore} className="d-block w-100" alt="..." />
-                <div className="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-md-block">
                   <h5>Store & Manage your Notes</h5>
                   <p>Enjoy the features.</p>
                 </div>

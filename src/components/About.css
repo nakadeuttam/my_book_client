@@ -20,7 +20,7 @@
 }
 .wrapper{
     background: linear-gradient(rgb(37, 58, 89), #ca9797, #9198e5);
-    height:100vh;
+    height:109vh;
     padding-top: 9vh;
     
 }
@@ -28,17 +28,17 @@
 img{
     
     width: 80%;
-    height: 80%;
+    height: 60%;
 
 }
 
 .carousel-item{
     height: 500px;
-    width: 700px;
+    width: 40%;
 }
 .carousel{
     height: 500px;
-    width: 700px;
+    width: 100%;
     
     
 }
@@ -49,7 +49,7 @@ img{
 
 .wrapper2{
     padding-top:9vh ;
-    height:100vh;
+    height: 113vh !important;;
 }
 .features{
     padding:40px;
@@ -62,4 +62,19 @@ img{
     padding-top:3vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+}
+.carousel-caption {
+    position: unset;
+}
+@media (max-width:500px) {
+    .carousel-item {
+        width: 100%;
+    }
+    .carousel-caption {
+        position: unset;
+    }
+    .features {
+        padding-top:0px;
+    }
+    
 }

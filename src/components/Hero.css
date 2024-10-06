@@ -37,6 +37,9 @@
 
    
 }
+.wrapper .content {
+    z-index: 1;
+}
 
 .custom-shape-divider-bottom-1715093529 {
     position: absolute;
@@ -268,3 +271,146 @@ li a:hover{
 .contact_div{
     padding-top: 20px;
 }
+
+
+
+
+
+.button1{
+    display: inline-block;
+    border-radius: 40px;
+    background-color: rgb(51 110 161);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+    vertical-align:middle;
+    
+  }
+  
+  .button1 span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  @media (min-width: 500px) {
+    .button1 span:after  {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      .button1:hover span {
+        padding-right: 25px;
+      }
+
+      .head_div {
+        padding-top:70px;
+        height: 100%;
+      }
+      .head_div button {
+        margin-top:15%;
+        margin-left: 25%;
+      }
+  }
+  
+  
+
+  
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+
+
+  @media (max-width:500px) {
+    .content{
+        display:block;
+        
+    
+    }
+    .img_div {
+        width: 100%;
+        padding-top:50px;
+    }
+    .description{
+        width: 100%;
+    }
+    .head_div {
+        width: 100%;
+    }
+    
+    @keyframes text-Animation {
+        
+         25%{
+            width: 10%;
+         }
+        75%{
+            width: 100%;
+        }
+    }
+    .custom-shape-divider-bottom-1714848548{
+        display :none
+    }
+    .nav{
+        display: block;
+    }
+    .wrapper2 .container {
+        display: block;
+        width: 90%;
+        left: 0px;
+        bottom: 3px;
+    }
+    .wrapper2 .container div {
+        width: 100%;
+    }
+    .privacy_desc {
+        width: 100%;
+        padding: 8%;
+    }
+    .privacy_img_div {
+        width: 100%;
+    animation: none;
+    height: 30%;}
+    .privacy_img {
+        height: 100%;
+       padding-right: 25%;
+       width: 100%;
+    }
+    .privacy_desc h3 {
+        padding-top:0px;
+        font-size: 15px;
+        padding-left: 16%;
+      
+        
+    }
+    .privacy_desc p{
+        display: none;;
+    }
+     .button1 {
+        font-size:  12px;
+        width:91px;
+        padding: 10px;
+        margin-left: 33%;
+        margin-top: 25px;
+        
+        
+    }
+    .button1:hover span{
+        right: 0;
+      }
+      
+     
+    }
+    
