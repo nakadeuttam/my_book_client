@@ -14,11 +14,29 @@ const Navbar = () => {
     localStorage.removeItem('token');
     navigate('/login');
   }
-  const NAV_style = { backgroundColor: "#253a59" };
+  const NAV_style = { backgroundColor: "#253a59"
+  };
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg" style={NAV_style}>
         <div className="container-fluid">
+
+        <Link
+            className={` navbar-brand ${
+              location.pathname === "/" ? "active font-weight-bold" : ""
+            }`}
+            to="/"
+          >
+          Home
+          </Link>
+          <Link
+            className={` home-icon ${
+              location.pathname === "/" ? "active font-weight-bold" : ""
+            }`}
+            to="/"
+          >
+          <i className="fa-solid fa-house-user"></i>
+          </Link>
           <Link
             className={` navbar-brand ${
               location.pathname === "/home" ? "active font-weight-bold" : ""
@@ -53,42 +71,8 @@ const Navbar = () => {
                   About
                 </Link>
               </li>
-              
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Mode
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Dark
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Light
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Default
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              
-              
             </ul>
-                  {(!localStorage.getItem('token'))? <div className="d-flex">
+                  {(!localStorage.getItem('token'))? <div className="d-flex resp-log">
                   <Link
                 className={`login mx-2 nav-link ${
                   location.pathname === "/login"
@@ -97,10 +81,11 @@ const Navbar = () => {
                 }`}
                 to="/login"
               >
+               
                 Login
               </Link>
               <Link
-                className={`mx-3 nav-link ${
+                className={`mx-3 signup nav-link ${
                   location.pathname === "/signup"
                     ? "active font-weight-bold"
                     : ""
@@ -113,7 +98,7 @@ const Navbar = () => {
                   location.pathname === "/login"
                     ? "active font-weight-bold"
                     : ""
-                }`} onClick={handleLoggedOut}>Log Out</button>}
+                }`} onClick={handleLoggedOut}><i className="fa-solid fa-right-from-bracket"></i> Log Out</button>}
           </div>
         </div>
       </nav>

@@ -3,11 +3,71 @@
   }
   .container-fluid .navbar-brand {
     color:#e44646;
+    font-size: 20px;
   }
   .collapse .nav-link:hover , .collapse .nav-link.active,.container-fluid .navbar-brand:hover ,.container-fluid .navbar-brand.active{
     color: #ffc107; /* Change the hover color as per your preference */
   }; 
+  .navbar-collapse {
+    flex-grow: unset;
+  }
+  .container-fluid{
+    width: unset;
+    font-size: 20px;
+    font-style: bold;
+  }
 
+ @media (min-width: 768px) {
+   .home-icon
+  {
+    display:none;
+   
+  }
+ }
+  @media (max-width: 768px) {
+    .container-fluid{
+      width: 100%;}
+      .navbar-brand{
+        display: none !important;
+      }
+      .home-icon{
+        display:visible !important;
+        color: #878bb6;
+      }
+      .navbar{
+        background-color: transparent !important;
+      
+      }
+      .resp-log{
+      flex-direction: column;
+      }
 
+      .login , .signup{
+        margin: unset !important;
+      }
+      .signup{
+        padding-top: 15px;
+      }
+
+      .navbar-collapse{margin-left: 360px;
+      background-color: rgb(37, 58, 89);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 70%;
+      height: 731px;
+      padding: 10px;
+      padding-top: 50px;
+      z-index: -1;
+    }
+
+      .navbar-toggler {
+        background-color: #878bb6;
+      }
+
+      .fa-solid, .fas {
+        font-size: x-large;
+      }
+  }
 
  

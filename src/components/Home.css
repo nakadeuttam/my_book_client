@@ -42,3 +42,9 @@
         width: 275px;
     }
 }
+
+@media (max-width: 768px) {
+    .home_parent {
+        padding-top: 20%;
+    }
+}

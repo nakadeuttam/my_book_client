@@ -1,76 +1,199 @@
-#f1{
-    border: 1px solid red ;    
-    padding: 60px 30px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .sign-up{
+   align-items: center !important;
+   display: flex;
+   justify-content: center;
+    padding-top: 20px;
+    margin-top: 4%;
+  }
+
+  .sign-up-form{
+width: 100%;
+padding: 25px;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  .loginBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  
+  .form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 30%;
-    height: 600px;;
-        text-align: center;
-        align-items: center;
-        box-shadow: 20px 20px 50px 20px rgb(196, 126, 126);
-        background-color: rgb(106, 106, 190) ;
-        border-radius: 6%;
-        animation: fun 4s linear infinite alternate;
-    }
-    #f1:hover{
-        box-shadow:inset 20px 20px 100px rgb(97, 190, 205);
-    }
-    #form_div{
-        display:flex;
-        justify-content: space-around;
-      
-    }
-    input,select{
-        height: 30px;
-        border-radius:8px ;
-        background-color: rgb(242, 228, 210);
-    }
-    select{
-        width: 60px;
-        text-align: center;
-    }
-    h1{
-        text-align: center;
-    }
-    label{
-        font-size: 23px;
-    }
     
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  form h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  form span {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+
+  .sign-up-form button{
+    background-color: #dc3545;;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.sign-up-form button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.sign-up-form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+  
+.loginBody{
     
-    
-    
-    .s1,.s2{
-        border-radius: 30%;
-        cursor: pointer;
-        text-align: center;
-        padding: 12px;
-        margin-top: 30px;
-        box-shadow: 5px 5px 5px 3px rgb(237, 172, 172) ;
-        margin-left: 10px;
-        
-        
-    
-    
-        
+    background-color: #c9d6ff;
+    background: linear-gradient(rgb(37, 58, 89), #ca9797, #9198e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
     }
-    .s1:hover , .s2:hover{
+    .sign-up{
+        width: 80%;
+    }
+    form h1 {
+      font-size: 1.75rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-container {
       padding: 15px;
-      box-shadow: 5px 5px 20px 3px rgb(175, 183, 113) inset;
-        
     }
-    body{
-        background-color: rgb(109, 183, 175);
-        background-image: linear-gradient(to right, black, white );
-    
+    .sign-up{
+        width: 80%;
     }
-    
-    @keyframes fun{
-        0% {box-shadow: 20px 20px 50px 20px rgb(196, 126, 126);}
-        25% {box-shadow: 20px 20px 50px 20px rgb(107, 53, 14);}
-        50%{box-shadow: 20px 20px 50px 20px rgb(40, 54, 30);}
-        75%{box-shadow: 20px 20px 50px 20px rgb(8, 53, 40);}
-        100%{box-shadow: 20px 20px 50px 20px rgb(27, 13, 53);}
+    form h1 {
+      font-size: 1.5rem;
     }
-    #heading{
-        margin-top:50px;
-        margin-bottom: 20px;
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      font-size: 0.9rem;
+      padding: 8px;
     }
-    
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Loader styling */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Subtle animation for form container */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
