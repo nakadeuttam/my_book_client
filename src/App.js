@@ -7,6 +7,8 @@ import NoteState from "./context/noteState";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import HomeIntro from "./components/HomeIntro";
+import Error from "./components/Error";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 function App() {
   return (
     <>
@@ -17,8 +19,9 @@ function App() {
           <Route exact path="/" element={<HomeIntro />}></Route>
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/signup" element={<Signup />}></Route>
+          <Route exact path="/login" element={<GoogleOAuthProvider clientId="75652528374-gj7i9975s19sdckr65mbih77j4hvc8nm.apps.googleusercontent.com"><Login/></GoogleOAuthProvider>}></Route>
+          <Route exact path="/signup" element={<GoogleOAuthProvider clientId="75652528374-gj7i9975s19sdckr65mbih77j4hvc8nm.apps.googleusercontent.com"><Signup/></GoogleOAuthProvider>}></Route>
+          <Route exact path="*" element={<Error/>}></Route>
         </Routes>
       </Router>
       </NoteState>

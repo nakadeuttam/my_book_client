@@ -89,7 +89,7 @@ padding: 25px;
   }
   
 
-  .sign-up-form button{
+  .sign-up-form .login-btn{
     background-color: #dc3545;;
     color: #fff;
     font-size: 12px;
@@ -197,3 +197,17 @@ padding: 25px;
     }
   }
   
+
+  .sign-in-google-btn{
+    height: 40px;
+    width:100%;
+    color:black;
+    background-color:white;
+    border-radius: 5px;
+}
+.google-btn-img{
+    width: 9%;
+    height: 60%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
